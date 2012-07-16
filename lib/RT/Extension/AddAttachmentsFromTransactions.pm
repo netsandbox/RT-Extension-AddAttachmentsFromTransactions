@@ -15,6 +15,12 @@ RT::Extension::AddAttachmentsFromTransactions - Add Attachments From Transaction
 With this plugin you can attach attachments from previous transactions to a
 reply or comment.
 
+Thanks to BÁLINT Bekény for contributing the code from his implementation.
+
+Also Thanks to Best Practical Solutions who are working on this feature for
+RT 4.2 on the '4.2/attach-from-transactions' branch where I've borrowed some
+code for this extension.
+
 =head1 INSTALLATION
 
 Installation instructions for RT-Extension-AddAttachmentsFromTransactions:
@@ -39,11 +45,15 @@ it under the same terms as Perl itself.
 
 =head1 SEE ALSO
 
+L<http://bestpractical.com/rt/>
 L<http://www.gossamer-threads.com/lists/rt/users/107976>
+L<https://github.com/bestpractical/rt/tree/4.2/attach-from-transactions>
 
 =head1 THANKS
 
 BÁLINT Bekény (Docca OutSource IT Ltd.)
+
+Best Practical Solutions
 
 =cut
 
