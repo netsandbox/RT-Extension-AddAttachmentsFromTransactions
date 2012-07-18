@@ -1,5 +1,5 @@
 use strict;
-no warnings;
+use warnings;
 
 package RT::Attachment;
 
