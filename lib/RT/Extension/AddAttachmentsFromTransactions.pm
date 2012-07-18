@@ -57,4 +57,17 @@ Best Practical Solutions
 
 =cut
 
+use Hook::LexWrap;
+
+use RT::Ticket;
+wrap 'RT::Ticket::_RecordNote',
+    pre => sub{
+        my %args = @_[1..@_-2];
+
+        # move the Attachment id's from session to the RT-Attach header
+        for my $id ( @{ $HTML::Mason::Commands::session{'AttachExisting'} } ) {
+            $args{'MIMEObj'}->head->add( 'RT-Attach' => $id );
+        }
+    };
+
 1;
