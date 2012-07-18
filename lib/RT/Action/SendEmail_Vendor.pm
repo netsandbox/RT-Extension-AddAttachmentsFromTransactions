@@ -71,7 +71,7 @@ sub AddAttachmentsFromSession {
     my $self = shift;
     my $email = $self->TemplateObj->MIMEObj;
 
-    # Add the RT-Attach-Existing from the session to the RT-Attach header
+    # move the Attachment id's from session to the RT-Attach header
     for my $id ( @{ $HTML::Mason::Commands::session{'AttachExisting'} } ) {
         $email->head->add('RT-Attach' => $id);
     }
