@@ -80,13 +80,14 @@ sub AddAttachmentsFromSession {
 # NOTE: new AddAttachmentsFromHeaders method from 4.2/attach-from-transactions branch
 sub AddAttachmentsFromHeaders {
     my $self  = shift;
+    my $orig  = $self->TransactionObj->Attachments->First;
     my $email = $self->TemplateObj->MIMEObj;
 
     use List::MoreUtils qw(uniq);
 
     # Add the RT-Attach headers from the transaction to the email
-    if (my $attachment = $self->TransactionObj->Attachments->First) {
-        for my $id ($attachment->GetAllHeaders('RT-Attach')) {
+    if ($orig and $orig->GetHeader('RT-Attach')) {
+        for my $id ($orig->ContentAsMIME(Children => 0)->head->get_all('RT-Attach')) {
             $email->head->add('RT-Attach' => $id);
         }
     }
