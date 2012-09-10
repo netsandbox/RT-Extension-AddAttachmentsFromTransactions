@@ -44,6 +44,8 @@ if ($size) {
 </tr>
 % }
 <%init>
+return unless $TicketObj;
+
 my $Attachments ||= $m->comp('/Ticket/Elements/FindAttachments', Ticket => $TicketObj);
 
 my %documents;
