@@ -1,6 +1,58 @@
+% if (keys %documents) {
+<tr>
+  <td class="label" valign="top"><&|/l&>Include attachments</&>:</td>
+  <td>
+% foreach my $key (sort { lc($a) cmp lc($b) } keys %documents) {
+<dl>
+<dt><%$key%></dt>
+% foreach my $rev (@{$documents{$key}}) {
+<%perl>
+my $size = $rev->ContentLength;
+if ($size) {
+    my $kb = int($size/102.4) / 10;
+    my $units = RT->Config->Get('AttachmentUnits');
+
+    if (!defined($units)) {
+        if ($size > 1024) {
+            $size = $kb . "k";
+        }
+        else {
+            $size = $size . "b";
+        }
+    }
+    elsif ($units eq 'k') {
+        $size = $kb . "k";
+    }
+    else {
+        $size = $size . "b";
+    }
+</%perl>
+<dd>
+<input type="checkbox" class="checkbox" name="AttachExisting" value="<% $rev->Id %>" />
+<font size="-2">
+<a href="<%RT->Config->Get('WebPath')%>/Ticket/Attachment/<%$rev->TransactionId%>/<%$rev->Id%>/<%$rev->Filename | u%>">
+% my $desc = loc("[_1] ([_2]) by [_3]", $rev->CreatedAsString, $size, $m->scomp('/Elements/ShowUser', User => $rev->CreatorObj));
+<% $desc |n%>
+</a>
+</font>
+</dd>
+% }
+% }
+</dl>
+% }
+  </td>
+</tr>
+% }
 <%init>
-# for RT 4.0.x
-return $m->comp('/Ticket/Elements/AddAttachmentsWithCheckbox', TicketObj => $TicketObj);
+return unless $TicketObj;
+
+my $Attachments ||= $m->comp('/Ticket/Elements/FindAttachments', Ticket => $TicketObj);
+
+my %documents;
+while ( my $attach = $Attachments->Next() ) {
+    next unless defined $attach->Filename && length $attach->Filename;
+    unshift( @{ $documents{ $attach->Filename } }, $attach );
+}
 </%init>
 
 <%args>
