@@ -6,6 +6,8 @@ use warnings;
 
 our $VERSION = '0.01';
 
+=encoding utf8
+
 =head1 NAME
 
 RT::Extension::AddAttachmentsFromTransactions - Add Attachments From Transactions
@@ -15,45 +17,62 @@ RT::Extension::AddAttachmentsFromTransactions - Add Attachments From Transaction
 With this plugin you can attach attachments from previous transactions to a
 reply or comment.
 
-Thanks to BÁLINT Bekény for contributing the code from his implementation.
-
-Also Thanks to Best Practical Solutions who are working on this feature for
-RT 4.2 on the '4.2/attach-from-transactions' branch where I've borrowed some
-code for this extension.
-
 =head1 INSTALLATION
 
-Installation instructions for RT-Extension-AddAttachmentsFromTransactions:
+=over
 
-	perl Makefile.PL
-	make
-	make install
-	Add 'RT::Extension::AddAttachmentsFromTransactions' to @Plugins in /opt/rt3/etc/RT_SiteConfig.pm
-	Clear mason cache: rm -rf /opt/rt3/var/mason_data/obj
-	Restart webserver
+=item perl Makefile.PL
+
+=item make
+
+=item make install
+
+=item Edit your /opt/rt4/etc/RT_SiteConfig.pm
+
+Add this line:
+
+    Set(@Plugins, qw(RT::Extension::AddAttachmentsFromTransactions));
+
+or add C<RT::Extension::AddAttachmentsFromTransactions> to your existing C<@Plugins> line.
+
+=item Clear your mason cache
+
+    rm -rf /opt/rt4/var/mason_data/obj/*
+
+=item Restart your webserver
+
+=back
 
 =head1 AUTHOR
 
-Christian Loos <cloos@netcologne.de>
+Christian Loos <cloos@netsandbox.de>
 
 =head1 LICENCE AND COPYRIGHT
 
-Copyright (C) 2012, NetCologne GmbH. All Rights Reserved.
+Copyright (C) 2012-2013, Christian Loos.
 
 This extension is free software; you can redistribute it and/or modify
 it under the same terms as Perl itself.
 
 =head1 SEE ALSO
 
-L<http://bestpractical.com/rt/>
-L<http://www.gossamer-threads.com/lists/rt/users/107976>
-L<https://github.com/bestpractical/rt/tree/4.2/attach-from-transactions>
+=over
+
+=item L<http://bestpractical.com/rt/>
+
+=item L<http://www.gossamer-threads.com/lists/rt/users/107976>
+
+=item L<https://github.com/bestpractical/rt/tree/4.2/attach-from-transactions>
+
+=back
 
 =head1 THANKS
 
-BÁLINT Bekény (Docca OutSource IT Ltd.)
+Thanks to BÁLINT Bekény for contributing the code from his implementation.
 
-Best Practical Solutions
+Also Thanks to Best Practical Solutions who are working on this feature for
+RT 4.2 on the '4.2/attach-from-transactions' branch where I've borrowed some
+code for this extension.
 
 =cut
 
