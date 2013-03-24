@@ -34,6 +34,8 @@ my $orig_add_attach = RT::Action::SendEmail->can('AddAttachments');
     $self->AddAttachmentsFromHeaders();
 };
 
+package RT::Action::SendEmail;
+
 sub AddAttachmentsFromSession {
     my $self = shift;
     my $email = $self->TemplateObj->MIMEObj;
