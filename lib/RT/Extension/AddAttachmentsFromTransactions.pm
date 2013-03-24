@@ -25,6 +25,55 @@ my $orig_note = RT::Ticket->can('_RecordNote');
     return $orig_note->($self, %args);
 };
 
+use RT::Action::SendEmail;
+my $orig_add_attach = RT::Action::SendEmail->can('AddAttachments');
+*RT::Action::SendEmail::AddAttachments = sub {
+    my $self = shift;
+
+    $self->AddAttachmentsFromSession();
+    $self->AddAttachmentsFromHeaders();
+};
+
+sub AddAttachmentsFromSession {
+    my $self = shift;
+    my $email = $self->TemplateObj->MIMEObj;
+
+    # move the Attachment id's from session to the RT-Attach header
+    for my $id ( @{ $HTML::Mason::Commands::session{'AttachExisting'} } ) {
+        $email->head->add('RT-Attach' => $id);
+    }
+}
+
+sub AddAttachmentsFromHeaders {
+    my $self  = shift;
+    my $orig  = $self->TransactionObj->Attachments->First;
+    my $email = $self->TemplateObj->MIMEObj;
+
+    use List::MoreUtils qw(uniq);
+
+    # Add the RT-Attach headers from the transaction to the email
+    if ($orig and $orig->GetHeader('RT-Attach')) {
+        for my $id ($orig->ContentAsMIME(Children => 0)->head->get_all('RT-Attach')) {
+            $email->head->add('RT-Attach' => $id);
+        }
+    }
+
+    # Take all RT-Attach headers and add the attachments to the outgoing mail
+    for my $id (uniq $email->head->get_all('RT-Attach')) {
+        $id =~ s/(?:^\s*|\s*$)//g;
+
+        my $attach = RT::Attachment->new( $self->TransactionObj->CreatorObj );
+        $attach->Load($id);
+        next unless $attach->Id
+                and $attach->TransactionObj->CurrentUserCanSee;
+
+        if ( !$email->is_multipart ) {
+            $email->make_multipart( 'mixed', Force => 1 );
+        }
+        $self->AddAttachment($attach, $email);
+    }
+}
+
 =encoding utf8
 
 =head1 NAME
