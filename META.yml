@@ -1,7 +1,7 @@
 ---
 abstract: 'Add Attachments From Transactions'
 author:
-  - 'Christian Loos <cloos@netcologne.de>'
+  - 'Christian Loos <cloos@netsandbox.de>'
 build_requires:
   ExtUtils::MakeMaker: 6.59
 configure_requires:
@@ -19,6 +19,7 @@ no_index:
     - html
     - inc
 requires:
+  Hook::LexWrap: 0
   perl: 5.8.3
 resources:
   license: http://dev.perl.org/licenses/
