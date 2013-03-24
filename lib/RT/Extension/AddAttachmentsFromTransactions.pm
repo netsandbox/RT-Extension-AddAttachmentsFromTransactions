@@ -23,7 +23,7 @@ my $orig_note = RT::Ticket->can('_RecordNote');
     }
 
     # cleanup session
-    delete $HTML::Mason::Commands::session{'AttachExisting'}
+    delete $HTML::Mason::Commands::session{'AttachExisting'};
 
     return $orig_note->($self, %args);
 };
