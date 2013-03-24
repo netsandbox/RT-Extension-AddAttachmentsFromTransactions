@@ -22,6 +22,9 @@ my $orig_note = RT::Ticket->can('_RecordNote');
         $args{'MIMEObj'}->head->add( 'RT-Attach' => $id );
     }
 
+    # cleanup session
+    delete $HTML::Mason::Commands::session{'AttachExisting'}
+
     return $orig_note->($self, %args);
 };
 

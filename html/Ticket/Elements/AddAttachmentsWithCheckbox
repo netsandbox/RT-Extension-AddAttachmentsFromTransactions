@@ -53,9 +53,6 @@ while ( my $attach = $Attachments->Next() ) {
     next unless defined $attach->Filename && length $attach->Filename;
     unshift( @{ $documents{ $attach->Filename } }, $attach );
 }
-
-# cleanup session
-$session{'AttachExisting'} = [];
 </%init>
 
 <%args>
