@@ -33,6 +33,8 @@ my $orig_add_attach = RT::Action::SendEmail->can('AddAttachments');
 *RT::Action::SendEmail::AddAttachments = sub {
     my $self = shift;
 
+    $orig_add_attach->($self, @_);
+
     $self->AddAttachmentsFromHeaders();
 };
 
