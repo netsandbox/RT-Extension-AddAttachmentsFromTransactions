@@ -33,21 +33,10 @@ my $orig_add_attach = RT::Action::SendEmail->can('AddAttachments');
 *RT::Action::SendEmail::AddAttachments = sub {
     my $self = shift;
 
-    $self->AddAttachmentsFromSession();
     $self->AddAttachmentsFromHeaders();
 };
 
 package RT::Action::SendEmail;
-
-sub AddAttachmentsFromSession {
-    my $self = shift;
-    my $email = $self->TemplateObj->MIMEObj;
-
-    # move the Attachment id's from session to the RT-Attach header
-    for my $id ( @{ $HTML::Mason::Commands::session{'AttachExisting'} } ) {
-        $email->head->add('RT-Attach' => $id);
-    }
-}
 
 sub AddAttachmentsFromHeaders {
     my $self  = shift;
