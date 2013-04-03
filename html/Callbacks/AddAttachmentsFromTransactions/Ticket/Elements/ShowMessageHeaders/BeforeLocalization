@@ -1,0 +1,48 @@
+<%init>
+# we can't use the 'Default' callback from ShowMessageHeaders here
+# because after the callback every header value runs through
+# '/Elements/MakeClicky' which removes all html with
+# RT::Interface::Web::EscapeUTF8 
+foreach my $f (@headers) {
+    next unless $f->{'Tag'} eq 'RT-Attach';
+
+    $f->{'Value'} =~ s/(?:^\s*|\s*$)//g;
+
+    my $att = RT::Attachment->new( $session{'CurrentUser'} );
+    $att->Load($f->{'Value'});
+
+    next unless $att->Id and $att->TransactionObj->CurrentUserCanSee;
+
+    my $size = $att->ContentLength;
+    my $kb = int($size/102.4) / 10;
+    my $units = RT->Config->Get('AttachmentUnits');
+    if (!defined($units)) {
+        if ($size > 1024) {
+            $size = $kb . "k";
+        }
+        else {
+            $size = $size . "b";
+        }
+    }
+    elsif ($units eq 'k') {
+        $size = $kb . "k";
+    }
+    else {
+        $size = $size . "b";
+    }
+
+    my $desc = $att->Filename . " ";
+    $desc   .= loc( "[_1] ([_2]) by [_3]",
+        $att->CreatedAsString,
+        $size,
+        $m->scomp('/Elements/ShowUser', User => $att->CreatorObj) );
+
+    $f->{'Value'} = sprintf '<a href="%s/Ticket/Attachment/%d/%d/%s">%s</a>',
+        RT->Config->Get('WebPath'), $att->TransactionObj->Id, $att->Id,
+        $m->interp->apply_escapes($att->Filename, qw(u h)),
+        $m->interp->apply_escapes($desc, 'h');
+}
+</%init>
+<%args>
+@headers => []
+</%args>

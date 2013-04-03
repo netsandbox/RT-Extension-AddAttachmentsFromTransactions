@@ -1,7 +1,7 @@
 html/Callbacks/AddAttachmentsFromTransactions/Ticket/Elements/AddAttachments/End
+html/Callbacks/AddAttachmentsFromTransactions/Ticket/Elements/ShowMessageHeaders/BeforeLocalization
 html/Callbacks/AddAttachmentsFromTransactions/Ticket/Elements/ShowMessageHeaders/Default
 html/Callbacks/AddAttachmentsFromTransactions/Ticket/Update.html/BeforeDisplay
-html/Ticket/Elements/ShowMessageHeaders
 inc/Module/Install.pm
 inc/Module/Install/Base.pm
 inc/Module/Install/Can.pm
