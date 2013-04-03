@@ -18,6 +18,9 @@ no_index:
   directory:
     - html
     - inc
+  package:
+    - RT::Action::SendEmail
+    - RT::Ticket
 requires:
   perl: 5.8.3
 resources:
