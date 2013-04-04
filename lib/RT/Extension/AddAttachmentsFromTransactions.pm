@@ -5,7 +5,7 @@ use strict;
 use warnings;
 no warnings 'redefine';
 
-our $VERSION = '0.00_01';
+our $VERSION = '0.01';
 
 use RT::Ticket;
 my $orig_note = RT::Ticket->can('_RecordNote');
