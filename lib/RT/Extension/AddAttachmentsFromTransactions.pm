@@ -126,7 +126,7 @@ it under the same terms as Perl itself.
 
 =item L<http://www.gossamer-threads.com/lists/rt/users/107976>
 
-=item L<https://github.com/bestpractical/rt/tree/4.2/attach-from-transactions>
+=item L<https://github.com/bestpractical/rt/tree/4.4/attach-from-transactions>
 
 =back
 
