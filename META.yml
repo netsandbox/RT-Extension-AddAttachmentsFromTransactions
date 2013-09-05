@@ -18,6 +18,7 @@ no_index:
   directory:
     - html
     - inc
+    - t
   package:
     - RT::Action::SendEmail
     - RT::Ticket

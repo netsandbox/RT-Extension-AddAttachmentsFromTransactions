@@ -57,3 +57,5 @@
 ^MYMETA\.
 #!end included /usr/local/share/perl/5.14.2/ExtUtils/MANIFEST.SKIP
 
+lib/RT/Extension/AddAttachmentsFromTransactions/Test.pm$
+t/tmp/
