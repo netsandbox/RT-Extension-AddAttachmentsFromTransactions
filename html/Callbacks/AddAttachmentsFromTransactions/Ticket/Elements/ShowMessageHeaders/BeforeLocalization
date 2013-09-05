@@ -41,6 +41,9 @@ foreach my $f (@headers) {
         RT->Config->Get('WebPath'), $att->TransactionObj->Id, $att->Id,
         $m->interp->apply_escapes($att->Filename, qw(u h)),
         $m->interp->apply_escapes($desc, 'h');
+
+    # rename header for better display in ticket history
+    $f->{'Tag'} = 'Attachment';
 }
 </%init>
 <%args>
