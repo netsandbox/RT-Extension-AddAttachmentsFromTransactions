@@ -135,7 +135,7 @@ it under the same terms as Perl itself.
 Thanks to BÁLINT Bekény for contributing the code from his implementation.
 
 Also Thanks to Best Practical Solutions who are working on this feature for
-RT 4.2 on the '4.2/attach-from-transactions' branch where I've borrowed some
+RT 4.4 on the '4.4/attach-from-transactions' branch where I've borrowed some
 code for this extension.
 
 =cut

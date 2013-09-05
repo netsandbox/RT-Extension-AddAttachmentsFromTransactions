@@ -42,6 +42,6 @@ THANKS
     implementation.
 
     Also Thanks to Best Practical Solutions who are working on this feature
-    for RT 4.2 on the '4.2/attach-from-transactions' branch where I've
+    for RT 4.4 on the '4.4/attach-from-transactions' branch where I've
     borrowed some code for this extension.
 
