@@ -18,9 +18,9 @@ our $VERSION = '0.01';
         # so let the original method handle it
         return $orig->($self, %args) unless $args{'MIMEObj'};
 
-        # move the Attachment id's from session to the RT-Attach header
+        # move the Attachment id's from session to the X-RT-Attach header
         for my $id ( @{ $HTML::Mason::Commands::session{'AttachExisting'} } ) {
-            $args{'MIMEObj'}->head->add( 'RT-Attach' => $id );
+            $args{'MIMEObj'}->head->add( 'X-RT-Attach' => $id );
         }
 
         # cleanup session
@@ -53,15 +53,15 @@ our $VERSION = '0.01';
 
         use List::MoreUtils qw(uniq);
 
-        # Add the RT-Attach headers from the transaction to the email
-        if ($orig and $orig->GetHeader('RT-Attach')) {
-            for my $id ($orig->ContentAsMIME(Children => 0)->head->get_all('RT-Attach')) {
-                $email->head->add('RT-Attach' => $id);
+        # Add the X-RT-Attach headers from the transaction to the email
+        if ($orig and $orig->GetHeader('X-RT-Attach')) {
+            for my $id ($orig->ContentAsMIME(Children => 0)->head->get_all('X-RT-Attach')) {
+                $email->head->add('X-RT-Attach' => $id);
             }
         }
 
-        # Take all RT-Attach headers and add the attachments to the outgoing mail
-        for my $id (uniq $email->head->get_all('RT-Attach')) {
+        # Take all X-RT-Attach headers and add the attachments to the outgoing mail
+        for my $id (uniq $email->head->get_all('X-RT-Attach')) {
             $id =~ s/(?:^\s*|\s*$)//g;
 
             my $attach = RT::Attachment->new( $self->TransactionObj->CreatorObj );

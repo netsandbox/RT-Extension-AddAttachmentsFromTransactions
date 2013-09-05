@@ -4,7 +4,7 @@
 # '/Elements/MakeClicky' which removes all html with
 # RT::Interface::Web::EscapeUTF8 
 foreach my $f (@headers) {
-    next unless $f->{'Tag'} eq 'RT-Attach';
+    next unless $f->{'Tag'} eq 'X-RT-Attach';
 
     $f->{'Value'} =~ s/(?:^\s*|\s*$)//g;
 
