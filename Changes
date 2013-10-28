@@ -1,0 +1,12 @@
+Revision history for Perl module RT::Extension::AddAttachmentsFromTransactions
+
+1.0 2013-09-05
+
+    * add basic tests
+    * Prefix headers with X for RFC822 compliance 
+    * add missing dependency for List::MoreUtils
+    * Ensure consistent escaping of filenames in attachment URIs
+
+0.01 2013-04-04
+
+    * initial release
