@@ -4,6 +4,8 @@ RTx         'RT-Extension-AddAttachmentsFromTransactions';
 all_from    'lib/RT/Extension/AddAttachmentsFromTransactions.pm';
 readme_from;
 
+repository 'https://github.com/cloos/RT-Extension-AddAttachmentsFromTransactions';
+
 requires 'List::MoreUtils';
 
 requires_rt '4.0.8';

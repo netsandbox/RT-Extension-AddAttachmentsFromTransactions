@@ -27,4 +27,5 @@ requires:
   perl: 5.8.3
 resources:
   license: http://dev.perl.org/licenses/
+  repository: https://github.com/cloos/RT-Extension-AddAttachmentsFromTransactions
 version: 1.00
