@@ -77,6 +77,35 @@ our $VERSION = '1.00';
     }
 }
 
+{
+    package RT::Attachment;
+
+    unless ( RT::Attachment->can('FriendlyContentLength') ) {
+        *FriendlyContentLength = sub {
+            my $self = shift;
+            my $size = $self->ContentLength;
+            return '' unless $size;
+
+            my $kb = int($size/102.4) / 10;
+            my $units = RT->Config->Get('AttachmentUnits');
+
+            if (!defined($units)) {
+                if ($size > 1024) {
+                    $size = $kb . "k";
+                } else {
+                    $size = $size . "b";
+                }
+            } elsif ($units eq 'k') {
+                $size = $kb . "k";
+            } else {
+                $size = $size . "b";
+            }
+
+            return $size;
+        }
+    }
+}
+
 =encoding utf8
 
 =head1 NAME
