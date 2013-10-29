@@ -28,4 +28,4 @@ requires:
 resources:
   license: http://dev.perl.org/licenses/
   repository: https://github.com/cloos/RT-Extension-AddAttachmentsFromTransactions
-version: 1.00
+version: 2.00

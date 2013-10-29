@@ -1,5 +1,9 @@
 Revision history for Perl module RT::Extension::AddAttachmentsFromTransactions
 
+2.0 2013-10-29
+
+    * RT 4.2 compatibility
+
 1.0 2013-09-05
 
     * add basic tests
