@@ -21,6 +21,7 @@ no_index:
     - t
   package:
     - RT::Action::SendEmail
+    - RT::Attachment
     - RT::Ticket
 requires:
   List::MoreUtils: 0
