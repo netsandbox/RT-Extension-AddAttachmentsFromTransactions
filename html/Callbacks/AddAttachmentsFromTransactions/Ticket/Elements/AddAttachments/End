@@ -3,6 +3,9 @@
   <td><& /Ticket/Elements/AddAttachmentsFromTransactions, Attachments => \%documents &></td>
 </tr>
 <%init>
+# for RT version 4.0.18 and above we use a different callback
+return if RT::Handle::cmp_version($RT::VERSION, '4.0.18') >= 0;
+
 return unless $TicketObj;
 
 # NOTE: we can't use here $m->comp_exists('/Ticket/Elements/FindAttachments')
