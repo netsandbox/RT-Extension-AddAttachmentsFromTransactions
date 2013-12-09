@@ -1,5 +1,5 @@
 <&| /Widgets/TitleBox,
-    title    => loc('Attachments from Transactions'),
+    title    => loc('Include attachments'),
     rolledup => 1,
 &>
 
