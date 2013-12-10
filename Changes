@@ -1,5 +1,9 @@
 Revision history for Perl module RT::Extension::AddAttachmentsFromTransactions
 
+2.01 2013-12-10
+
+    * use rolled up widget for RT version 4.0.18 and above
+
 2.00 2013-10-29
 
     * RT 4.2 compatibility
