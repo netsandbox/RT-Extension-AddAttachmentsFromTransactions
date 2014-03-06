@@ -1,4 +1,6 @@
 Changes
+html/Callbacks/AddAttachmentsFromTransactions/Elements/ShowMessageHeaders/BeforeLocalization
+html/Callbacks/AddAttachmentsFromTransactions/Elements/ShowMessageHeaders/Default
 html/Callbacks/AddAttachmentsFromTransactions/Ticket/Elements/AddAttachments/End
 html/Callbacks/AddAttachmentsFromTransactions/Ticket/Elements/ShowMessageHeaders/BeforeLocalization
 html/Callbacks/AddAttachmentsFromTransactions/Ticket/Elements/ShowMessageHeaders/Default
