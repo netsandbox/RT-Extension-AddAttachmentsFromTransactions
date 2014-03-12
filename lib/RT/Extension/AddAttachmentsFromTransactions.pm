@@ -121,17 +121,23 @@ reply or comment.
 
 =over
 
-=item perl Makefile.PL
+=item C<perl Makefile.PL>
 
-=item make
+=item C<make>
 
-=item make install
+=item C<make install>
 
-=item Edit your /opt/rt4/etc/RT_SiteConfig.pm
+May need root permissions
 
-Add this line:
+=item Edit your F</opt/rt4/etc/RT_SiteConfig.pm>
 
-    Set(@Plugins, qw(RT::Extension::AddAttachmentsFromTransactions));
+If you are using RT 4.2 or greater, add this line:
+
+Plugin('RT::Extension::AddAttachmentsFromTransactions');
+
+For RT 3.8 and 4.0, add this line:
+
+Set(@Plugins, qw(RT::Extension::AddAttachmentsFromTransactions));
 
 or add C<RT::Extension::AddAttachmentsFromTransactions> to your existing C<@Plugins> line.
 

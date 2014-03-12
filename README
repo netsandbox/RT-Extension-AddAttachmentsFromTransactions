@@ -7,13 +7,19 @@ DESCRIPTION
     to a reply or comment.
 
 INSTALLATION
-    perl Makefile.PL
-    make
-    make install
-    Edit your /opt/rt4/etc/RT_SiteConfig.pm
-        Add this line:
+    "perl Makefile.PL"
+    "make"
+    "make install"
+        May need root permissions
 
-            Set(@Plugins, qw(RT::Extension::AddAttachmentsFromTransactions));
+    Edit your /opt/rt4/etc/RT_SiteConfig.pm
+        If you are using RT 4.2 or greater, add this line:
+
+        Plugin('RT::Extension::AddAttachmentsFromTransactions');
+
+        For RT 3.8 and 4.0, add this line:
+
+        Set(@Plugins, qw(RT::Extension::AddAttachmentsFromTransactions));
 
         or add "RT::Extension::AddAttachmentsFromTransactions" to your
         existing @Plugins line.
