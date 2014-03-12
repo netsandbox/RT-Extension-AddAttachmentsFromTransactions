@@ -1,5 +1,5 @@
 This file contains message digests of all files listed in MANIFEST,
-signed via the Module::Signature module, version 0.68.
+signed via the Module::Signature module, version 0.73.
 
 To verify the content in this distribution, first make sure you have
 Module::Signature installed, then type:
@@ -14,12 +14,14 @@ not run its Makefile.PL or Build.PL.
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-SHA1 6c92a06bb612c63f196897d0e9ea5da03b74c705 Changes
-SHA1 a877c3267c1e6588a0fc65fc4e63d6fdf489f9f3 MANIFEST
+SHA1 d1c07f3c2acf8a2edef3ceaa996ad01f42aa45a0 Changes
+SHA1 3766a34b8ce00dbfa5480b50d68d66e3b809f3a5 MANIFEST
 SHA1 77ca5112cde5faefac1b2014bb18f6d813a19c8d MANIFEST.SKIP
-SHA1 30a158691ab3a5ec411d8d55084324378485d584 META.yml
+SHA1 0d15e41d34acec26d036e8e15df845a6ae0ff9c8 META.yml
 SHA1 8992fbfecb6b262f37605ee48f3ad6c5e846a348 Makefile.PL
-SHA1 376c31893e56be1dc474486c967952f384d7b1b6 README
+SHA1 b775fd11cfffb9feb190c37e74b5a4a64e1ad540 README
+SHA1 a5e346237854f9436707628554598959befbb20d html/Callbacks/AddAttachmentsFromTransactions/Elements/ShowMessageHeaders/BeforeLocalization
+SHA1 343476e819b9e89fbeb2b4239ad5b2ee695372f8 html/Callbacks/AddAttachmentsFromTransactions/Elements/ShowMessageHeaders/Default
 SHA1 7631214fc1ae024781166db7045101d0fc47b6b4 html/Callbacks/AddAttachmentsFromTransactions/Ticket/Elements/AddAttachments/End
 SHA1 76f4f19ddd6e3f3cfa157757043a4ad767240b18 html/Callbacks/AddAttachmentsFromTransactions/Ticket/Elements/ShowMessageHeaders/BeforeLocalization
 SHA1 343476e819b9e89fbeb2b4239ad5b2ee695372f8 html/Callbacks/AddAttachmentsFromTransactions/Ticket/Elements/ShowMessageHeaders/Default
@@ -37,16 +39,16 @@ SHA1 79f5b4199f622e8b05aac266b0c39f6a85bb303f inc/Module/Install/ReadmeFromPod.p
 SHA1 13c903897bad7f0fdd7871a4a0182ff62dfbefd5 inc/Module/Install/Substitute.pm
 SHA1 e4196994fa75e98bdfa2be0bdeeffef66de88171 inc/Module/Install/Win32.pm
 SHA1 c3a6d0d5b84feb3280622e9599e86247d58b0d18 inc/Module/Install/WriteAll.pm
-SHA1 9be3ec23aa63de1eb2fac80380e0a08185719bb5 lib/RT/Extension/AddAttachmentsFromTransactions.pm
+SHA1 2e058e89efa756b6347a4fa8a3620586e10059b8 lib/RT/Extension/AddAttachmentsFromTransactions.pm
 SHA1 0018b62a62b928bb4edf66e79de1aad7f47002c3 lib/RT/Extension/AddAttachmentsFromTransactions/Test.pm.in
 SHA1 340666bf246661d176f9afa7edfbb2eb775ee570 t/00-compile.t
 SHA1 fef2bd5769b1e31ea8b61553175e22a254cfffdb t/00-mason-syntax.t
 SHA1 fb288319388df60a3d18e9473bb5708eff607a8f t/99-policy.t
 SHA1 0b6ee3329771b9d5fefeafcdaf6f7c5510c0c58f t/pod.t
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.12 (GNU/Linux)
+Version: GnuPG v1.4.14 (GNU/Linux)
 
-iEYEARECAAYFAlKnHDkACgkQTwqgb7Yxh3zDbwCfV00xodqDVMRMMY2xFNV+a7bk
-UUEAn20XDM9B7u3VssHf80dFtraFea63
-=j+ho
+iEYEARECAAYFAlMgKvgACgkQTwqgb7Yxh3wKjACbB4m/+9af7q84MoGzyqwbf2et
+aFMAn3MNFDWtFFWbdVRzntsYD1eZW+L7
+=M+7Y
 -----END PGP SIGNATURE-----
