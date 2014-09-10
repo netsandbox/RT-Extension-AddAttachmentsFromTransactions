@@ -1,5 +1,10 @@
 Revision history for RT::Extension::AddAttachmentsFromTransactions
 
+2.03 2014-09-10
+ - update license from Perl to GPLv2 to match RT license
+ - make tests author test
+ - update Module::Install
+
 2.02 2014-03-12
  - fix header display for transactions in RT 4.2
 

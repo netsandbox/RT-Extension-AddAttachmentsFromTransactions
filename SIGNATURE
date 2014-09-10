@@ -14,12 +14,12 @@ not run its Makefile.PL or Build.PL.
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-SHA1 d1c07f3c2acf8a2edef3ceaa996ad01f42aa45a0 Changes
-SHA1 3766a34b8ce00dbfa5480b50d68d66e3b809f3a5 MANIFEST
+SHA1 3d15e23af54406d8c1369f1650f84f80c24339a8 Changes
+SHA1 c74ac87e4ea26a5e0028cc019f751d035f965efa MANIFEST
 SHA1 77ca5112cde5faefac1b2014bb18f6d813a19c8d MANIFEST.SKIP
-SHA1 0d15e41d34acec26d036e8e15df845a6ae0ff9c8 META.yml
-SHA1 8992fbfecb6b262f37605ee48f3ad6c5e846a348 Makefile.PL
-SHA1 b775fd11cfffb9feb190c37e74b5a4a64e1ad540 README
+SHA1 2b71215a83c3fe0a43fc5195da95cc1ade4812be META.yml
+SHA1 e06c667b791ca91ccf0d3065a12fe47a47049610 Makefile.PL
+SHA1 b4954ee4d6c2ae9975858f3339df8bf45b8587a9 README
 SHA1 a5e346237854f9436707628554598959befbb20d html/Callbacks/AddAttachmentsFromTransactions/Elements/ShowMessageHeaders/BeforeLocalization
 SHA1 343476e819b9e89fbeb2b4239ad5b2ee695372f8 html/Callbacks/AddAttachmentsFromTransactions/Elements/ShowMessageHeaders/Default
 SHA1 7631214fc1ae024781166db7045101d0fc47b6b4 html/Callbacks/AddAttachmentsFromTransactions/Ticket/Elements/AddAttachments/End
@@ -28,27 +28,31 @@ SHA1 343476e819b9e89fbeb2b4239ad5b2ee695372f8 html/Callbacks/AddAttachmentsFromT
 SHA1 0d85fcd34eb38a93ca75f171058b9ab432f0e17d html/Callbacks/AddAttachmentsFromTransactions/Ticket/Update.html/BeforeDisplay
 SHA1 52ca391bc815bfd15c142a17ca44e5e659404922 html/Callbacks/AddAttachmentsFromTransactions/Ticket/Update.html/BeforeSubmit
 SHA1 934a7f8a3741c91347e322dd1954834963b9ddb4 html/Ticket/Elements/AddAttachmentsFromTransactions
-SHA1 8a924add836b60fb23b25c8506d45945e02f42f4 inc/Module/Install.pm
-SHA1 2d0fad3bf255f8c1e7e1e34eafccc4f595603ddc inc/Module/Install/Base.pm
-SHA1 f0e01fff7d73cd145fbf22331579918d4628ddb0 inc/Module/Install/Can.pm
-SHA1 7328966e4fda0c8451a6d3850704da0b84ac1540 inc/Module/Install/Fetch.pm
-SHA1 b62ca5e2d58fa66766ccf4d64574f9e1a2250b34 inc/Module/Install/Makefile.pm
-SHA1 1aa925be410bb3bfcd84a16985921f66073cc1d2 inc/Module/Install/Metadata.pm
-SHA1 40df6f8d889b52eef379f04af6227f9302b23bf9 inc/Module/Install/RTx.pm
+SHA1 9b5001bfa9cf8607b3b3935284d9253e0391c9f1 inc/Module/Install.pm
+SHA1 cab0e564f9bdf658535f683aa197157e06d0dcea inc/Module/Install/Base.pm
+SHA1 a1559b5b3b40f68efbbd256f4fef85970891b3ae inc/Module/Install/Can.pm
+SHA1 f15c1ba85f6d52e70c48c64bf0752c90a4ad66f9 inc/Module/Install/Fetch.pm
+SHA1 d44d96acd20793306dd201030c688e2a7d3083ee inc/Module/Install/Include.pm
+SHA1 eb48df8bafd07c6a862126d9b274df42b4395742 inc/Module/Install/Makefile.pm
+SHA1 95c73873c6c3cb7024614c225c53863e1e90c134 inc/Module/Install/Metadata.pm
+SHA1 acbf148a1e6067cc677c89da2bfe1ae4b0b1e01b inc/Module/Install/RTx.pm
+SHA1 3fdf4c0cffdb1a2e23e5cd26bf95be553f1f9590 inc/Module/Install/RTx/Runtime.pm
 SHA1 79f5b4199f622e8b05aac266b0c39f6a85bb303f inc/Module/Install/ReadmeFromPod.pm
 SHA1 13c903897bad7f0fdd7871a4a0182ff62dfbefd5 inc/Module/Install/Substitute.pm
-SHA1 e4196994fa75e98bdfa2be0bdeeffef66de88171 inc/Module/Install/Win32.pm
-SHA1 c3a6d0d5b84feb3280622e9599e86247d58b0d18 inc/Module/Install/WriteAll.pm
-SHA1 2e058e89efa756b6347a4fa8a3620586e10059b8 lib/RT/Extension/AddAttachmentsFromTransactions.pm
-SHA1 0018b62a62b928bb4edf66e79de1aad7f47002c3 lib/RT/Extension/AddAttachmentsFromTransactions/Test.pm.in
-SHA1 340666bf246661d176f9afa7edfbb2eb775ee570 t/00-compile.t
-SHA1 fef2bd5769b1e31ea8b61553175e22a254cfffdb t/00-mason-syntax.t
-SHA1 fb288319388df60a3d18e9473bb5708eff607a8f t/99-policy.t
-SHA1 0b6ee3329771b9d5fefeafcdaf6f7c5510c0c58f t/pod.t
+SHA1 f8b2ae3386f6ba26c33408968a953d450842eade inc/Module/Install/Win32.pm
+SHA1 f302bc703d76299cff243e5b44cecd61aac27b76 inc/Module/Install/WriteAll.pm
+SHA1 4afcd32d7a733dcf0d21f2cda456fed47012cd9c inc/YAML/Tiny.pm
+SHA1 3b39cfb54fdbc374793e4c8581a8cdf3062fb2c8 inc/unicore/Name.pm
+SHA1 c3c49981dd494310afdf418ad45fd56e6ee3c32c lib/RT/Extension/AddAttachmentsFromTransactions.pm
+SHA1 e06d5f70962a6e401ae7437033a685494377cb22 xt/00-compile.t
+SHA1 fef2bd5769b1e31ea8b61553175e22a254cfffdb xt/00-mason-syntax.t
+SHA1 a5b52ff1bc8f7180873c294cda4c4836eb7aa2f0 xt/99-policy.t
+SHA1 0018b62a62b928bb4edf66e79de1aad7f47002c3 xt/lib/RT/Extension/AddAttachmentsFromTransactions/Test.pm.in
+SHA1 0b6ee3329771b9d5fefeafcdaf6f7c5510c0c58f xt/pod.t
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.14 (GNU/Linux)
+Version: GnuPG v1
 
-iEYEARECAAYFAlMgKvgACgkQTwqgb7Yxh3wKjACbB4m/+9af7q84MoGzyqwbf2et
-aFMAn3MNFDWtFFWbdVRzntsYD1eZW+L7
-=M+7Y
+iEYEARECAAYFAlQQHzAACgkQTwqgb7Yxh3z6JwCdFudLH7gxRVltimn74flXmo/q
+kMoAn2drcx6/VzED+EqSwO2p6n8LuiVJ
+=hGCS
 -----END PGP SIGNATURE-----
