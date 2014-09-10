@@ -153,12 +153,13 @@ or add C<RT::Extension::AddAttachmentsFromTransactions> to your existing C<@Plug
 
 Christian Loos <cloos@netsandbox.de>
 
-=head1 LICENCE AND COPYRIGHT
+=head1 LICENSE AND COPYRIGHT
 
-Copyright (C) 2012-2014, Christian Loos.
+This software is Copyright (C) 2012-2014, Christian Loos.
 
-This extension is free software; you can redistribute it and/or modify
-it under the same terms as Perl itself.
+This is free software, licensed under:
+
+  The GNU General Public License, Version 2, June 1991
 
 =head1 SEE ALSO
 
