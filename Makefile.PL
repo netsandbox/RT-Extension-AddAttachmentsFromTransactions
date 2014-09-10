@@ -1,30 +1,21 @@
 use inc::Module::Install;
 
-RTx         'RT-Extension-AddAttachmentsFromTransactions';
-all_from    'lib/RT/Extension/AddAttachmentsFromTransactions.pm';
-readme_from;
-
+RTx 'RT-Extension-AddAttachmentsFromTransactions';
 repository 'https://github.com/cloos/RT-Extension-AddAttachmentsFromTransactions';
 
 requires 'List::MoreUtils';
 
 requires_rt '4.0.8';
+rt_too_new '4.4.0';
 
 no_index package => 'RT::Action::SendEmail';
 no_index package => 'RT::Attachment';
 no_index package => 'RT::Ticket';
 
-my ($lib_path) = $INC{'RT.pm'} =~ /^(.*)[\\\/]/;
-my $local_lib_path = "$RT::LocalPath/lib";
-
 substitute(
-    {
-        RT_LIB_PATH => join( ' ', $local_lib_path, $lib_path ),
-    },
-    {
-        sufix => '.in'
-    },
-    qw(lib/RT/Extension/AddAttachmentsFromTransactions/Test.pm),
+    { RT_LIB_PATH => "$RT::LocalPath/lib " . File::Basename::dirname( $INC{'RT.pm'} ) },
+    { sufix => '.in' },
+    'lib/RT/Extension/AddAttachmentsFromTransactions/Test.pm',
 );
 
 sign;

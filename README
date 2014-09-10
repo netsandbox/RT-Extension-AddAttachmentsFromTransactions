@@ -7,9 +7,9 @@ DESCRIPTION
     to a reply or comment.
 
 INSTALLATION
-    "perl Makefile.PL"
-    "make"
-    "make install"
+    perl Makefile.PL
+    make
+    make install
         May need root permissions
 
     Edit your /opt/rt4/etc/RT_SiteConfig.pm
@@ -21,7 +21,7 @@ INSTALLATION
 
         Set(@Plugins, qw(RT::Extension::AddAttachmentsFromTransactions));
 
-        or add "RT::Extension::AddAttachmentsFromTransactions" to your
+        or add RT::Extension::AddAttachmentsFromTransactions to your
         existing @Plugins line.
 
     Clear your mason cache
