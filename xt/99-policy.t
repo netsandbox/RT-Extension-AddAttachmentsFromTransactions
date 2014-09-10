@@ -6,7 +6,7 @@ use File::Find;
 
 my @files;
 find( sub { push @files, $File::Find::name if -f },
-      qw{lib html t} );
+      qw{lib html xt} );
 if ( my $dir = `git rev-parse --git-dir 2>/dev/null` ) {
     # We're in a git repo, use the ignore list
     chomp $dir;

@@ -15,7 +15,7 @@ no_index package => 'RT::Ticket';
 substitute(
     { RT_LIB_PATH => "$RT::LocalPath/lib " . File::Basename::dirname( $INC{'RT.pm'} ) },
     { sufix => '.in' },
-    'lib/RT/Extension/AddAttachmentsFromTransactions/Test.pm',
+    'xt/lib/RT/Extension/AddAttachmentsFromTransactions/Test.pm',
 );
 
 sign;

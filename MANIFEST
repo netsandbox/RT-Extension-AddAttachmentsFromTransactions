@@ -23,14 +23,14 @@ inc/Module/Install/WriteAll.pm
 inc/unicore/Name.pm
 inc/YAML/Tiny.pm
 lib/RT/Extension/AddAttachmentsFromTransactions.pm
-lib/RT/Extension/AddAttachmentsFromTransactions/Test.pm.in
 Makefile.PL
 MANIFEST			This list of files
 MANIFEST.SKIP
 META.yml
 README
 SIGNATURE
-t/00-compile.t
-t/00-mason-syntax.t
-t/99-policy.t
-t/pod.t
+xt/00-compile.t
+xt/00-mason-syntax.t
+xt/99-policy.t
+xt/lib/RT/Extension/AddAttachmentsFromTransactions/Test.pm.in
+xt/pod.t

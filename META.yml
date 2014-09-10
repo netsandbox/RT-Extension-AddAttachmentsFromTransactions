@@ -18,7 +18,7 @@ no_index:
   directory:
     - html
     - inc
-    - t
+    - xt
   package:
     - RT::Action::SendEmail
     - RT::Attachment
