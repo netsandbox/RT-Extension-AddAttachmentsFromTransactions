@@ -15,11 +15,11 @@ INSTALLATION
     Edit your /opt/rt4/etc/RT_SiteConfig.pm
         If you are using RT 4.2 or greater, add this line:
 
-        Plugin('RT::Extension::AddAttachmentsFromTransactions');
+            Plugin('RT::Extension::AddAttachmentsFromTransactions');
 
-        For RT 3.8 and 4.0, add this line:
+        For RT 4.0, add this line:
 
-        Set(@Plugins, qw(RT::Extension::AddAttachmentsFromTransactions));
+            Set(@Plugins, qw(RT::Extension::AddAttachmentsFromTransactions));
 
         or add RT::Extension::AddAttachmentsFromTransactions to your
         existing @Plugins line.
@@ -33,7 +33,7 @@ AUTHOR
     Christian Loos <cloos@netsandbox.de>
 
 LICENCE AND COPYRIGHT
-    Copyright (C) 2012-2013, Christian Loos.
+    Copyright (C) 2012-2014, Christian Loos.
 
     This extension is free software; you can redistribute it and/or modify
     it under the same terms as Perl itself.
