@@ -1,8 +1,10 @@
 use strict;
 use warnings;
 
-use Test::More;
 use lib 'xt/lib';
+use RT::Extension::AddAttachmentsFromTransactions::Test nodb => 1, tests => undef;
 
-use_ok("RT::Extension::AddAttachmentsFromTransactions::Test");
-use_ok("RT::Extension::AddAttachmentsFromTransactions");
+require_ok("RT::Extension::AddAttachmentsFromTransactions");
+require_ok("RT::Extension::AddAttachmentsFromTransactions::Test");
+
+done_testing;
