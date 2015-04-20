@@ -1,5 +1,5 @@
 
-#!start included /usr/local/share/perl/5.14.2/ExtUtils/MANIFEST.SKIP
+#!start included /usr/local/share/perl/5.20.1/ExtUtils/MANIFEST.SKIP
 # Avoid version control files.
 \bRCS\b
 \bCVS\b
@@ -42,6 +42,7 @@
 \.tmp$
 \.#
 \.rej$
+\..*\.sw.?$
 
 # Avoid OS-specific files/dirs
 # Mac OSX metadata
@@ -52,10 +53,13 @@
 # Avoid Devel::Cover and Devel::CoverX::Covered files.
 \bcover_db\b
 \bcovered\b
- 
+
+# Avoid prove files
+\B\.prove$
+
 # Avoid MYMETA files
 ^MYMETA\.
-#!end included /usr/local/share/perl/5.14.2/ExtUtils/MANIFEST.SKIP
+#!end included /usr/local/share/perl/5.20.1/ExtUtils/MANIFEST.SKIP
 
 lib/RT/Extension/AddAttachmentsFromTransactions/Test.pm$
-t/tmp/
+xt/tmp/
