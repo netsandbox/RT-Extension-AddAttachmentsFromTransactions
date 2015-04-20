@@ -1,8 +1,8 @@
-blib/
-Makefile
-Makefile.old
-MANIFEST.bak
-MYMETA.*
-pm_to_blib
+/blib/
+/Makefile
+/Makefile.old
+/MANIFEST.bak
+/MYMETA.*
+/pm_to_blib
 /xt/lib/RT/Extension/AddAttachmentsFromTransactions/Test.pm
 /xt/tmp/
