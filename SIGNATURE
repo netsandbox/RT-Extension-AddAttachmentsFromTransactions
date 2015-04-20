@@ -12,14 +12,14 @@ the distribution may already have been compromised, and you should
 not run its Makefile.PL or Build.PL.
 
 -----BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
+Hash: SHA512
 
-SHA1 3d15e23af54406d8c1369f1650f84f80c24339a8 Changes
-SHA1 c74ac87e4ea26a5e0028cc019f751d035f965efa MANIFEST
-SHA1 77ca5112cde5faefac1b2014bb18f6d813a19c8d MANIFEST.SKIP
-SHA1 2b71215a83c3fe0a43fc5195da95cc1ade4812be META.yml
+SHA1 ffcbbb71ae91d06657c04f7946352343053dd6d5 Changes
+SHA1 3f483e20d972ccba35df59b6ed44d1f4fb08dd4d MANIFEST
+SHA1 136420e296511762812b969d4c12c1366d12c417 MANIFEST.SKIP
+SHA1 6734a4a7d493915707e5e9a68d45469f74975dcf META.yml
 SHA1 e06c667b791ca91ccf0d3065a12fe47a47049610 Makefile.PL
-SHA1 b4954ee4d6c2ae9975858f3339df8bf45b8587a9 README
+SHA1 12f4ecc1024b3f02fdb9589245861a833ebde131 README
 SHA1 a5e346237854f9436707628554598959befbb20d html/Callbacks/AddAttachmentsFromTransactions/Elements/ShowMessageHeaders/BeforeLocalization
 SHA1 343476e819b9e89fbeb2b4239ad5b2ee695372f8 html/Callbacks/AddAttachmentsFromTransactions/Elements/ShowMessageHeaders/Default
 SHA1 7631214fc1ae024781166db7045101d0fc47b6b4 html/Callbacks/AddAttachmentsFromTransactions/Ticket/Elements/AddAttachments/End
@@ -28,31 +28,39 @@ SHA1 343476e819b9e89fbeb2b4239ad5b2ee695372f8 html/Callbacks/AddAttachmentsFromT
 SHA1 0d85fcd34eb38a93ca75f171058b9ab432f0e17d html/Callbacks/AddAttachmentsFromTransactions/Ticket/Update.html/BeforeDisplay
 SHA1 52ca391bc815bfd15c142a17ca44e5e659404922 html/Callbacks/AddAttachmentsFromTransactions/Ticket/Update.html/BeforeSubmit
 SHA1 934a7f8a3741c91347e322dd1954834963b9ddb4 html/Ticket/Elements/AddAttachmentsFromTransactions
-SHA1 9b5001bfa9cf8607b3b3935284d9253e0391c9f1 inc/Module/Install.pm
-SHA1 cab0e564f9bdf658535f683aa197157e06d0dcea inc/Module/Install/Base.pm
-SHA1 a1559b5b3b40f68efbbd256f4fef85970891b3ae inc/Module/Install/Can.pm
-SHA1 f15c1ba85f6d52e70c48c64bf0752c90a4ad66f9 inc/Module/Install/Fetch.pm
-SHA1 d44d96acd20793306dd201030c688e2a7d3083ee inc/Module/Install/Include.pm
-SHA1 eb48df8bafd07c6a862126d9b274df42b4395742 inc/Module/Install/Makefile.pm
-SHA1 95c73873c6c3cb7024614c225c53863e1e90c134 inc/Module/Install/Metadata.pm
-SHA1 acbf148a1e6067cc677c89da2bfe1ae4b0b1e01b inc/Module/Install/RTx.pm
+SHA1 25c34611d32f04c8f31f0954738d4f9ad1445e58 inc/Module/Install.pm
+SHA1 873e0c701d5fcbda91b69351072829d23cd4ea39 inc/Module/Install/Base.pm
+SHA1 195f689404849bd6e725a24c0e574fced7a5c450 inc/Module/Install/Can.pm
+SHA1 7ca66de454258074c191b5e1012dffacffc5c42d inc/Module/Install/Fetch.pm
+SHA1 23f746abd5be080a787f5189e3c98739b661c5b1 inc/Module/Install/Include.pm
+SHA1 07be064784c1689db53d4e969dacf26480eeba97 inc/Module/Install/Makefile.pm
+SHA1 2617a7b4d9e96e4840ec973a6f99f645d8dd2e27 inc/Module/Install/Metadata.pm
+SHA1 2e6d9ed3ead010223a770841a5944e7ae5d1dc7a inc/Module/Install/RTx.pm
 SHA1 3fdf4c0cffdb1a2e23e5cd26bf95be553f1f9590 inc/Module/Install/RTx/Runtime.pm
 SHA1 79f5b4199f622e8b05aac266b0c39f6a85bb303f inc/Module/Install/ReadmeFromPod.pm
 SHA1 13c903897bad7f0fdd7871a4a0182ff62dfbefd5 inc/Module/Install/Substitute.pm
-SHA1 f8b2ae3386f6ba26c33408968a953d450842eade inc/Module/Install/Win32.pm
-SHA1 f302bc703d76299cff243e5b44cecd61aac27b76 inc/Module/Install/WriteAll.pm
-SHA1 4afcd32d7a733dcf0d21f2cda456fed47012cd9c inc/YAML/Tiny.pm
-SHA1 3b39cfb54fdbc374793e4c8581a8cdf3062fb2c8 inc/unicore/Name.pm
-SHA1 c3c49981dd494310afdf418ad45fd56e6ee3c32c lib/RT/Extension/AddAttachmentsFromTransactions.pm
-SHA1 e06d5f70962a6e401ae7437033a685494377cb22 xt/00-compile.t
-SHA1 fef2bd5769b1e31ea8b61553175e22a254cfffdb xt/00-mason-syntax.t
-SHA1 a5b52ff1bc8f7180873c294cda4c4836eb7aa2f0 xt/99-policy.t
+SHA1 a0fdfa64dbe46ce06b058a062020b6bf0e8ff793 inc/Module/Install/Win32.pm
+SHA1 118cc99ef1d3441d6e3f17fabd778438926119d5 inc/Module/Install/WriteAll.pm
+SHA1 4a2989632b48af38fe30768e409181032d506ecb inc/YAML/Tiny.pm
+SHA1 a33317fa5684c518e34d691dc899685f5e929e9e lib/RT/Extension/AddAttachmentsFromTransactions.pm
+SHA1 da3d0e9d29f23fe02a287224063b13cc987033ff xt/00-compile.t
+SHA1 9f535c72c86c8a7e9e83d8036c990eaff89799c4 xt/00-mason-syntax.t
+SHA1 5e72ef9186fe23495db9116b7d0dbee17dbfc4e1 xt/99-policy.t
 SHA1 0018b62a62b928bb4edf66e79de1aad7f47002c3 xt/lib/RT/Extension/AddAttachmentsFromTransactions/Test.pm.in
-SHA1 0b6ee3329771b9d5fefeafcdaf6f7c5510c0c58f xt/pod.t
+SHA1 77c68add5ff60e63623c279255c44ad0dae3fba4 xt/pod.t
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1
 
-iEYEARECAAYFAlQQHzAACgkQTwqgb7Yxh3z6JwCdFudLH7gxRVltimn74flXmo/q
-kMoAn2drcx6/VzED+EqSwO2p6n8LuiVJ
-=hGCS
+iQIcBAEBCgAGBQJVNNu6AAoJEKq6dEXbZ7ZroZMP/AjEED3YF0qcBRb36wi8TBi5
+RV6dgKXgfOIzXkz2nztqhvt73GgUWcMF/m2d9u3K3tDA3VdFmmtFydwNXg46y8cC
+beMBK0raRj7R91ofdzxChgUvhbRmzoQvYz30vyN/jF3Y2DWNw+92OcPelBtKf2kZ
+msw87vC93RzvQbIFCXlOPq0x7mJeVatXptAqX5nHezAYKoNaX59ePvnOKNsZtApQ
+0dEFkHrJ2M5EP6XDHWxZ01V3hFsPtVS90tz+knKbJv9eLbXHagcQQqZFE30LuSUI
+tZZu4A7NLpYOReslUA9fvTWneH/5uciesGI69R8rT2bvNnGLgEOugsp+dYUt7FQ4
+iuUW8N/BnbU6kKZOxyMsh+UFgwNf11NRPydPs7k/eiUs8Vc77WDmTogbv4Xr9lWQ
+LHi+6yYl+mhpqg8VeATdb2+8DWuA1gw2C8rjpuZxXEOqP9o+jU7E9dTM1GLtq7eQ
+MvZIDjjapyrLP4q9uq1YwsNA0jmatEAxL1xcWFnt+oj7nZIEZRvllwJWw1GfZxBK
++sACyMd/smggofXijuMJvAqtXQUV4YzO0cSxlDX8qGESgK79W1WS//MSGRurXLGQ
+vhjYuBLq6fDw5wLRSnNIyayQ6PQmMgVv//MSYyXREY9jUq/6XnDKAjtt8+YS161i
+trpWnOK5sdPG56h5cWwU
+=qPWh
 -----END PGP SIGNATURE-----

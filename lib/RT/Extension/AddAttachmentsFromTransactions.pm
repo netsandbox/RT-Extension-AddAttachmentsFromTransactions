@@ -4,7 +4,7 @@ use 5.008003;
 use strict;
 use warnings;
 
-our $VERSION = '2.03';
+our $VERSION = '2.10';
 
 {
     require RT::Ticket;
@@ -155,7 +155,7 @@ Christian Loos <cloos@netsandbox.de>
 
 =head1 LICENSE AND COPYRIGHT
 
-This software is Copyright (C) 2012-2014, Christian Loos.
+This software is Copyright (C) 2012-2015, Christian Loos.
 
 This is free software, licensed under:
 

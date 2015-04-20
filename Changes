@@ -1,5 +1,9 @@
 Revision history for RT::Extension::AddAttachmentsFromTransactions
 
+2.10 2015-04-20
+ - fix mail structure if HTML templates in use
+ - update Module::Install
+
 2.03 2014-09-10
  - update license from Perl to GPLv2 to match RT license
  - make tests author test
