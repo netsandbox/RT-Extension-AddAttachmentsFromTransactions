@@ -1,6 +1,7 @@
 use strict;
 use warnings;
 
+use lib 'xt/lib';
 use RT::Extension::AddAttachmentsFromTransactions::Test nodb => 1;
 
 use File::Find;
