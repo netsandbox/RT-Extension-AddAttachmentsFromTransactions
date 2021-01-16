@@ -1,0 +1,24 @@
+---
+name: RT extension test
+
+on:
+  pull_request:
+  push:
+
+jobs:
+  test:
+    name: Test RT
+
+    runs-on: ubuntu-latest
+
+    container: netsandbox/request-tracker:4.2
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: RT extension test
+        run: |
+          RELEASE_TESTING=1 perl Makefile.PL
+          make
+          make test
