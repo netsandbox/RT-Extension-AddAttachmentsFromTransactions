@@ -1,4 +1,3 @@
----
 name: RT extension test
 
 on:
@@ -11,7 +10,7 @@ jobs:
 
     runs-on: ubuntu-latest
 
-    container: netsandbox/request-tracker:4.2
+    container: ghcr.io/netsandbox/request-tracker:4.2
 
     steps:
       - name: Checkout code
